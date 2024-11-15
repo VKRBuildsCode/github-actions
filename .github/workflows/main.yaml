@@ -13,7 +13,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Send WhatsApp Notification
+      - name: WhatsApp Notification Action
         uses: KnosTx/whatsapp-notification-action@v1.0.1
         with:
           whatsapp_invite_link: "https://chat.whatsapp.com/CBJF14HIs8yGFTOqLzv7TH"
