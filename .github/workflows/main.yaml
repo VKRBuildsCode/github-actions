@@ -1,4 +1,4 @@
-name: My First Workflow
+name: Notify on whatsapp
 
 on: 
   push:
@@ -6,17 +6,15 @@ on:
       - main  # Triggers on pushes to the main branch
 
 jobs:
-  build:
-    runs-on: ubuntu-latest  # Specifies the type of runner
+  notify-whatsapp:
+    runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2  # Checks out your repository code
-      
-      - name: Run a script
-        run: echo "Hello, World!"  # Replace with your script or command
-      - name: Image 2 PDF Action
-        uses: sharadcodes/img2pdf-action@v1.0
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Send WhatsApp Notification
+        uses: KnosTx/whatsapp-notification-action@v1
         with:
-          image-folder: 'original_images' # This is a Required field & this folder has original images
-          page-size: 'A4' # This is a Required field & it is used to specify the page size of PDFs
-          output-folder: 'mypdfs' # This is Required field & this folder will be used to store generated PDFs
+          whatsapp_invite_link: "https://chat.whatsapp.com/CBJF14HIs8yGFTOqLzv7TH"
+          
