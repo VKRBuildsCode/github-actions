@@ -37,6 +37,6 @@ jobs:
       - name: Image 2 PDF Action
         uses: sharadcodes/img2pdf-action@v1.0
         with:
-          image-folder: 'images' # This is a Required field & this folder has original images
+          image-folder: 'original_images' # This is a Required field & this folder has original images
           page-size: 'A4' # This is a Required field & it is used to specify the page size of PDFs
           output-folder: 'mypdfs' # This is Required field & this folder will be used to store generated PDFs
